@@ -36,3 +36,41 @@ from .utils import (
     seed_target_multivariate_indices,
 )
 from .vector_ar import select_order, vector_auto_regression
+from .wsmi import wsmi
+
+__all__ = [
+    # Base classes
+    "Connectivity",
+    "EpochConnectivity",
+    "EpochSpectralConnectivity",
+    "EpochSpectroTemporalConnectivity",
+    "EpochTemporalConnectivity",
+    "SpectralConnectivity",
+    "SpectroTemporalConnectivity",
+    "TemporalConnectivity",
+    # Datasets
+    "make_signals_in_freq_bands",
+    "make_surrogate_data",
+    # Decoding
+    "CoherencyDecomposition",
+    # Effective connectivity
+    "phase_slope_index",
+    # Envelope
+    "envelope_correlation",
+    "symmetric_orth",
+    # IO
+    "read_connectivity",
+    # Spectral
+    "spectral_connectivity_epochs",
+    "spectral_connectivity_time",
+    # Utils (public ones)
+    "check_indices",
+    "degree",
+    "seed_target_indices",
+    "seed_target_multivariate_indices",
+    # VAR
+    "select_order",
+    "vector_auto_regression",
+    # WSMI
+    "wsmi",
+]
