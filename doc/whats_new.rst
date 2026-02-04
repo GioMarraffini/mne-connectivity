@@ -28,21 +28,27 @@ Enhancements
 - Add support for :class:`mne.time_frequency.EpochsSpectrum` objects to be passed as data to the :func:`~mne_connectivity.spectral_connectivity_epochs` function, by `Thomas Binns`_ and `Eric Larson`_ (:pr:`220`).
 - Add support for :class:`mne.time_frequency.EpochsTFR` objects to be passed as data to the :func:`~mne_connectivity.spectral_connectivity_epochs` and :func:`~mne_connectivity.spectral_connectivity_time` functions, by `Thomas Binns`_ and `Daniel McCloy`_ (:pr:`232`).
 - Update the cross-references for relevant functions and classes and make data types more explicit throughout the documentation, by `Thomas Binns`_ (:pr:`214`).
+- Add a new :func:`~mne_connectivity.wsmi` function for computing weighted symbolic mutual information (wSMI), by `Giovanni Marraffini`_ and `Laouen Belloli`_ (:pr:`307`).
 
 Bug
 ~~~
 
 - Improve the documentation of the ``fmin`` and ``cwt_freqs`` parameters in the :func:`~mne_connectivity.spectral_connectivity_epochs` function, by `Richard Köhler`_ and `Daniel McCloy`_ (:pr:`242`).
+- Ignore bad channels in computations in :func:`~mne_connectivity.envelope_correlation` and :func:`~mne_connectivity.vector_auto_regression`, and in :func:`~mne_connectivity.spectral_connectivity_epochs`, :func:`~mne_connectivity.spectral_connectivity_time`, and :func:`~mne_connectivity.phase_slope_index` when indices are not specified, by `Thomas Binns`_ (:pr:`334`).
+- Fix ``fmin`` and ``fmax`` frequency band masking for ``n_cycles`` arrays in :func:`~mne_connectivity.spectral_connectivity_time`, by `Thomas Binns`_ (:pr:`356`).
 
 API
 ~~~
 
 - Add a new ``min_distance`` parameter to the :func:`~mne_connectivity.viz.plot_sensors_connectivity` function which offers greater control over the minimum distance required between sensors to plot a connection between them, by `Thomas Binns`_ and `Eric Larson`_ (:pr:`221`).
+- Begin deprecation of ``2*np.pi`` as the default value of ``sfreq`` in favour of ``None`` in :func:`~mne_connectivity.phase_slope_index`, by `Thomas Binns`_ (:pr:`326`).
 
 Authors
 ~~~~~~~
 
 * `Thomas Binns`_
+* `Giovanni Marraffini`_
+* `Laouen Belloli`_
 * `Richard Köhler`_
 * `Adam Li`_
 * `Marijn van Vliet`_
